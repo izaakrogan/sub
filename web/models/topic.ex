@@ -4,6 +4,7 @@ defmodule Discuss.Topic do
   schema "topics" do
     field :title, :string
     belongs_to :user, Discuss.User
+    has_many :comments, Discuss.Comment
   end
 
   # the struct represents the record that is in the database or is about to go in
